@@ -26,4 +26,3 @@ count_cities_counties_by_type <- state_data %>%
 
 write.csv(count_cities_counties_by_type,
           "output/michigan_citiese_counties_counts.csv")
-# I am testing to see if what happens when I uplaod this addition line to git
