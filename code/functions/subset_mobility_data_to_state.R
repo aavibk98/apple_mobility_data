@@ -10,10 +10,6 @@
 library("dplyr")
 library("readr")
 
-# testing variables for the function
-input_file_name <- "data/raw_data/applemobilitytrends-2021-10-02.csv"
-state_to_subset <- "Michigan"
-
 # create a function to subset any US state out of the full dataset
 # this should also create an output CSV file that is named based on the state
 # that is subsetted
