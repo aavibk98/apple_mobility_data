@@ -3,11 +3,6 @@ library("tidyr")
 library("dplyr")
 library("readr")
 
-# testing variables for function
-data_to_long <- paste0("output/subsetted_states_wide/",
-"applemobilitytrends-2021-10-02_Michigan.csv")
-state_to_long <- "Michigan"
-
 # create a function to convert wide data from "output/subsetted_states_wide"
 # folder with individual state outputs and convert those files to
 # long format
