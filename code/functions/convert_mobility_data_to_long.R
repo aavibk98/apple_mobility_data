@@ -23,9 +23,6 @@ convert_mobility_data_to_long <- function(data_to_long, state_to_long) {
     tidyr::pivot_longer(values_to = "rel_mobility", names_to = "date",
                         cols = starts_with("20"), values_drop_na = TRUE)
 
-# extract core name for output file name use
-  core_name <- tools::file_path_sans_ext(basename(data_to_long))
-
 # sanitize state name for output files
   state_no_spaces <- gsub(state_to_long, pattern = " ", replacement = "_")
 
