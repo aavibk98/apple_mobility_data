@@ -31,7 +31,9 @@ convert_mobility_data_to_long <- function(data_to_long, state_to_long) {
 
 # read out the output file in .csv form
   readr::write_csv(long_dataset, file = paste0("output/subsetted_states_long/",
-                                             core_name,
+                                             "applemobilitytrends-2021-10-02",
+                                             "_",
+                                             state_no_spaces,
                                              "_",
                                              "long",
                                              ".csv"))
