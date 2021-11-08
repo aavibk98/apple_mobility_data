@@ -12,5 +12,7 @@ zcat /blast-db/sars-cov-2-seq-data/2021-10-24_ncbi_sars_cov2_sequences.fasta.gz 
 	# zcat /blast-db/sars-cov-2-seq-data/2021-10-24_ncbi_sars_cov_2_sequences.fasta.gz | awk -F'|' {print $3}' | sort 
 # this is the part of the command that sorts the countries using a numbering system and lists them out from most appearances to least
 	# | uniq -c | sort -rn
-zcat /blast-db/sars-cov-2-seq-data/2021-10-24_ncbi_sars_cov2_sequences.fasta.gz | awk -F'|' '{print $21}' | sort | uniq -c | sort -rn
+zcat /blast-db/sars-cov-2-seq-data/2021-10-24_ncbi_sars_cov2_sequences.fasta.gz | awk -F'|' '{print $21}' | sort | uniq -c | sort -rn |
+ sed '1d'
+
 
