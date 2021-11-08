@@ -27,19 +27,18 @@ counties_cities_trans_tally <- function(input_mobility_data,
     group_by(geo_type, transportation_type) %>%
     tally()
 
-# extract core name for output file name use
-  core_name <- tools::file_path_sans_ext(basename(input_mobility_data))
-
 # sanitize state name for output files
   state_no_spaces <- gsub(state_to_tally, pattern = " ", replacement = "_")
 
 # creating an output .csv file
   readr::write_csv(count_cities_counties_by_type,
                    file = paste0("output/subsetted_states_tallied/",
-                                    core_name,
-                                    "_",
-                                    "tally",
-                                    ".csv"))
+                                 "applemobilitytrends-2021-10-02",
+                                 "_",
+                                 state_no_spaces,
+                                 "_",
+                                 "tally",
+                                 ".csv"))
 
   return(count_cities_counties_by_type)
 }
