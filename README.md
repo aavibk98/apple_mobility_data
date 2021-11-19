@@ -12,6 +12,7 @@ It currently uses dplyr to work with some of the tabular data. Eventually, it wi
 
 ## Change Log
 
+* 2021-10-23: Parameterize Rmd and add bash script to drive knitting
 * 2021-09-26: Modified the second script to read all the five states output files created by the first script and run them through a for loop to create five different output files for those states that shows the count of cities and counties for each transportation type.
 * 2021-09-24: Created a function called counties_cities_trans_tally that uses dplyr to tally up the number of cities and counties for each transportation type in a given state.
 * 2021-09-24: Modified the first script to use a for loop that calls the function subset_mobility_data_to_state to subset a specific state from the larger country file and put and do that for five different states. Each state was given its own .csv output file in the output directory.
