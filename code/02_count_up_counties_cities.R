@@ -10,11 +10,12 @@
 # from the output folder
 source("code/functions/counties_cities_trans_tally.R")
 
-for (input in c("output/subsetted_states_wide/applemobilitytrends-2021-10-02_Michigan.csv",
-               "output/subsetted_states_wide/applemobilitytrends-2021-10-02_Utah.csv",
-               "output/subsetted_states_wide/applemobilitytrends-2021-10-02_Texas.csv",
-               "output/subsetted_states_wide/applemobilitytrends-2021-10-02_Georgia.csv",
-               "output/subsetted_states_wide/applemobilitytrends-2021-10-02_Vermont.csv")) {
+for (input in c(
+  "output/subsetted_states_wide/applemobilitytrends-2021-10-02_Michigan.csv",
+  "output/subsetted_states_wide/applemobilitytrends-2021-10-02_Utah.csv",
+  "output/subsetted_states_wide/applemobilitytrends-2021-10-02_Texas.csv",
+  "output/subsetted_states_wide/applemobilitytrends-2021-10-02_Georgia.csv",
+  "output/subsetted_states_wide/applemobilitytrends-2021-10-02_Vermont.csv")) {
   counties_cities_trans_tally(
     input_mobility_data = input)
 }
