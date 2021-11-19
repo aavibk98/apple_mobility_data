@@ -18,14 +18,12 @@ convert_mobility_data_to_long <- function(data_to_long, state_to_long) {
     tidyr::pivot_longer(values_to = "rel_mobility", names_to = "date",
                         cols = starts_with("20"), values_drop_na = TRUE)
 
-# sanitize state name for output files
-  state_no_spaces <- gsub(state_to_long, pattern = " ", replacement = "_")
+# extract core name for output file naming use
+  core_name <- tools::file_path_sans_ext(basename(data_to_long))
 
 # read out the output file in .csv form
   readr::write_csv(long_dataset, file = paste0("output/subsetted_states_long/",
-                                             "applemobilitytrends-2021-10-02",
-                                             "_",
-                                             state_no_spaces,
+                                             core_name,
                                              "_",
                                              "long",
                                              ".csv"))
